@@ -34,5 +34,5 @@ export DATASET_DIR=${TMP}/datasets/
 
 
 source /home/${STUDENT_ID}/miniconda3/bin/activate test
-cd /home/${STUDENT_ID}/realNvp/
-python train.py python train.py --dataset=cifar10 --batch_size=64 --base_dim=64 --res_blocks=8 --max_epoch=100
+cd /home/${STUDENT_ID}/realNVP/
+python train.py --dataset=cifar10 --batch_size=64 --base_dim=64 --res_blocks=8 --max_epoch=100
