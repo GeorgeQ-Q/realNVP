@@ -36,7 +36,7 @@ def load(dataset):
         transform = transforms.Compose(
             [transforms.RandomHorizontalFlip(p=0.5), 
              transforms.ToTensor()])
-        train_set = datasets.CIFAR10('../../data/CIFAR10', 
+        train_set = datasets.CIFAR10('./data/CIFAR10', 
             train=True, download=True, transform=transform)
         [train_split, val_split] = data.random_split(train_set, [46000, 4000])
 
@@ -49,7 +49,7 @@ def load(dataset):
              transforms.Resize(64), 
              transforms.RandomHorizontalFlip(p=0.5), 
              transforms.ToTensor()])
-        train_set = datasets.ImageFolder('../../data/CelebA/train', 
+        train_set = datasets.ImageFolder('./data/CelebA/train', 
             transform=transform)
         [train_split, val_split] = data.random_split(train_set, [150000, 12770])
 
@@ -58,7 +58,7 @@ def load(dataset):
         transform = transforms.Compose(
             [transforms.RandomHorizontalFlip(p=0.5),
             transforms.ToTensor()])
-        train_set = datasets.ImageFolder('../../data/ImageNet32/train', 
+        train_set = datasets.ImageFolder('./data/ImageNet32/train', 
             transform=transform)
         [train_split, val_split] = data.random_split(train_set, [1250000, 31149])
 
@@ -67,7 +67,7 @@ def load(dataset):
         transform = transforms.Compose(
             [transforms.RandomHorizontalFlip(p=0.5),
             transforms.ToTensor()])
-        train_set = datasets.ImageFolder('../../data/ImageNet64/train', 
+        train_set = datasets.ImageFolder('./data/ImageNet64/train', 
             transform=transform)
         [train_split, val_split] = data.random_split(train_set, [1250000, 31149])
 
